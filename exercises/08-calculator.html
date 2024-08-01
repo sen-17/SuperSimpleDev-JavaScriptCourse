@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculator</title>
+    <style>
+    body{
+      font-family:arial;
+      background-color:black;
+      color:white;
+    }
+    
+    .container{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      
+      
+    }
+
+    .rows{
+      margin-bottom:10px;
+      display:flex;
+      align-items:center;
+    }
+
+    .buttons-style{
+      background-color:rgb(51,51,51);
+      border:none;
+      padding:30px 35px;;
+      color:white;
+      font-size:1.5rem;
+      font-weight:bold;
+      border-radius:50px;
+      width:80px;
+      height:80px;
+      margin-right:10px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      }
+
+      .buttons-style2{
+      background-color:rgb(254, 160, 10);
+      border:none;
+      padding:30px 35px;;
+      color:white;
+      font-size:1.5rem;
+      font-weight:bold;
+      border-radius:50px;
+      width:80px;
+      height:80px;
+      margin-right:10px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      }
+
+      .button-style{
+        display:flex;
+        font-size:2rem;
+        justify-content:center;
+      }
+
+    </style>
+  </head>
+  <body>
+    
+    <p class="js-button button-style"></p>
+
+    <div class="container">
+    <div class="rows">
+    <button class="buttons-style2"
+    onclick="calculate('%')"
+    >%</button>
+    <button class="buttons-style2"
+    onclick="clearDisplay()";
+    >CE</button>
+    <button class="buttons-style2" onclick="clearDisplay()">C</button>
+    <button class="buttons-style2"
+    onclick="calculate('/')"
+    >÷</button>
+    </div>
+    
+    <div class="rows">
+    <button class="buttons-style"
+    onclick="calculate(7)"
+    >7</button>
+    <button class="buttons-style"
+    onclick="calculate(8)">8</button>
+    <button class="buttons-style"
+    onclick="calculate(9)">9</button>
+    <button class="buttons-style2"
+    onclick="calculate('*')">×</button>
+    </div>
+    
+    <div class="rows">
+    <button class="buttons-style"
+    onclick="calculate(4)"
+    >4</button>
+    <button class="buttons-style"
+    onclick="calculate(5)"
+    >5</button>
+    <button class="buttons-style"
+    onclick="calculate(6)"
+    >6</button>
+    <button class="buttons-style2"
+    onclick="calculate('-')"
+    >-</button>
+    </div>
+    
+    <div class="rows">
+    <button class="buttons-style"
+    onclick="calculate(1)"
+    >1</button>
+    <button class="buttons-style"
+    onclick="calculate(2)"
+    >2</button>
+    <button class="buttons-style"
+    onclick="calculate(3)"
+    >3</button>
+    <button class="buttons-style2"
+    onclick="calculate('+')"
+    >+</button>
+    </div>
+    
+    <div class="rows">
+    <button class="buttons-style"
+    onclick="calculate('+')"
+    >+/-</button>
+    <button class="buttons-style"
+    onclick="calculate(0)"
+    >0</button>
+    <button class="buttons-style"
+    onclick="calculate('.')"
+    >.</button>
+    <button class="buttons-style2"
+    onclick="calculateTotal()">=</button>
+    </div>
+</div>
+
+<script>
+ const x = document.querySelector('.js-button');
+ 
+ function calculate (value){
+  x.innerHTML += value
+ }
+
+ function clearDisplay (){
+  x.innerHTML = ''
+ }
+
+ function calculateTotal (){
+  try{
+    x.innerHTML = eval(x.innerHTML)
+  }
+  catch(error){
+    x.innerHTML = `Error`;
+  }
+ }
+  
+
+
+</script>
+  </body>
+</html>

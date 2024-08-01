@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>EXERCISE 10</title>
+    <style>
+      body{
+        font-family:arial;
+      }
+
+      .function-button{
+        padding:5px 8px;
+        background-color:white;
+        color:black;
+        cursor:pointer;
+        border:1px solid black;
+        border-radius:6px;
+        font-weight:bold;
+      }
+
+      .is-toggled{
+        background-color:black;
+        color:white;
+        padding:5px 8px;
+        cursor:pointer;
+        border:1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    
+    <!-- <button class="js-button">Test</button> 
+     -->
+    
+     <button class="function-button js-button" onclick="clickButton()">Gaming</button>
+
+     <button class="function-button js-button2"
+     onclick="clickButton2()">Music</button>
+
+    
+    <script>
+     /*10c
+     const buttonElement = document.querySelector('.js-button');
+
+      console.log(buttonElement.classList.contains('js-button'));
+      */
+
+     const buttonElement = document.querySelector('.js-button');
+
+     
+     function clickButton (){
+      if (!buttonElement.classList.contains('is-toggled')){
+        buttonElement.classList.add ('is-toggled');
+      } else 
+        buttonElement.classList.remove('is-toggled');
+      }
+
+      const buttonElement2 = document.querySelector('.js-button2');
+
+      function clickButton2 (){
+      if (!buttonElement2.classList.contains('is-toggled')){
+        buttonElement2.classList.add ('is-toggled');
+      } else 
+        buttonElement2.classList.remove('is-toggled');
+      }
+       
+      
+     
+     
+     
+
+
+      
+    </script>
+  </body>
+</html>

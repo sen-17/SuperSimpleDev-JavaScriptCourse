@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Booleans & If statements exercise</title>
+  </head>
+  <body>
+    <script>
+      // 6a-c
+      const hour =  18
+      const name = `Jasson`
+
+      if (hour >= 17 ||  hour >= 0 && hour <6 ) {
+        console.log (`Good Night ${name}`);
+      } else if (hour >= 6 && hour < 12) {
+        console.log (`Good Morning ${name}`);
+      } else if (hour >= 12 && hour < 17) {
+        console.log (`Good Afternoon ${name}`);
+      }
+
+      //6d-e
+
+      const age = 66;
+      const isHoliday = true;
+
+      if ((age <= 6 || age >= 65) && !isHoliday){
+        console.log (`Discount`);
+      } else if ((age > 6 && age < 64) && !isHoliday){
+        console.log (`No Discount`);
+      }
+
+      //heads or tails
+      const randomNumber = (Math.random());
+      
+      const result = randomNumber < 0.5 ? `heads` : `tails`
+
+      const guess = `heads`;
+      console.log (guess === result ? `You Win` : `You lose`);
+
+      //carts
+       
+
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>exercise 9</title>
+  </head>
+  <body>
+    <input  class = "js-input" placeholder = "Name" onkeydown="handleText(event)">
+    <button class= "js-submit" onclick="
+    DOM(); ;
+    
+    ">Submit</button>
+
+    <p class="namePopUp"></p>
+
+    
+    
+    <script>
+     function handleText(event){
+      if (event.key === `Enter`){
+        DOM();
+      }
+
+     }
+     
+     
+     function DOM (){
+      const tests = document.querySelector('.js-input') 
+      let test =  String (tests.value);
+      document.querySelector('.namePopUp').innerHTML 
+     = `${test}`;
+     
+     }
+
+     
+     
+      
+    </script>
+  </body>
+</html>

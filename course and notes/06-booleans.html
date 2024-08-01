@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Booleans and If-statements</title>
+  </head>
+  <body>
+    <script>
+      //theres only true or false in booleans.
+      
+      /*
+      syntax rules for booleans
+      true
+      false
+      */
+
+      true
+      false
+
+      /*
+      console.log(3 > 5 - 5);
+      console.log (5 === `5.00`);
+
+      //if statements
+      if (true) {
+        console.log(`hello`);
+      } else {
+        console.log(`else`);
+      }
+
+      const age = 15;
+     
+      if (age >= 16) {
+        console.log(`You can drive`);
+      } else if (age >= 14 ){
+        console.log (`Almost there`);
+      } else {
+        console.log (`You can not drive`);
+      }
+
+      //if statement syntax
+      // if (){} , else is optional.
+
+      // And Operator
+      */
+
+      console.log(true && true);
+      console.log (0.2 >= 0 && 0.2 < 1/3);
+
+      //OR operator
+      console.log (true || false);
+
+      //NOT operator
+      console.log (!true);
+
+      //TERNARY OPERATOR, similar to if else
+      const result = true ? `truthy` : `falsy`
+      console.log(result);
+
+      //Guard Operator,the right
+      false && console.log(`hello`);
+      const message = 5 && `hello`
+      console.log(message);
+
+      //DEFAULT OPERATOR
+      const currency = undefined || `USD`;
+
+      console.log(currency);
+    </script>
+  </body>
+</html>
